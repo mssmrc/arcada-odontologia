@@ -18,14 +18,14 @@ https://arcada-odontologia.<sua-conta>.workers.dev
 ```
 
 `<sua-conta>` é o subdomínio da sua conta Cloudflare. Dá para trocá-lo uma vez em
-**Workers & Pages → Settings → Subdomain** (por exemplo, `2mrs` → `arcada-odontologia.2mrs.workers.dev`).
+**Workers & Pages → Settings → Subdomain** (por exemplo, `runaweb` → `arcada-odontologia.runaweb.workers.dev`).
 
 ## 2. Usar um subdomínio próprio (opcional)
 
-Se você tiver um domínio na Cloudflare (ex.: `2mrs.com.br`):
+Se você tiver um domínio na Cloudflare (ex.: `runaweb.com.br`):
 
 1. **Workers & Pages → arcada-odontologia → Settings → Domains & Routes → Add → Custom domain**.
-2. Digite `odonto.2mrs.com.br` e confirme. O DNS e o HTTPS são configurados automaticamente.
+2. Digite `odonto.runaweb.com.br` e confirme. O DNS e o HTTPS são configurados automaticamente.
 
 ## 3. Publicar pelo GitHub (opcional)
 

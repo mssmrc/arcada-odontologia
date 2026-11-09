@@ -32,7 +32,12 @@ export const SITE = {
 
 /** Texto obrigatório nos sites de case. */
 export const DEMO_NOTICE = 'Site demonstrativo. Empresa, profissionais, depoimentos e contatos são fictícios.'
-export const DEV_CREDIT = { name: '2MRS Tecnologia', text: 'Desenvolvido por' } as const
+export const DEV_CREDIT = {
+  name: 'Runa Web',
+  text: 'Desenvolvido por',
+  /** Site da empresa que assina o projeto (link do rodapé). */
+  url: 'https://runaweb.com.br',
+} as const
 
 export const INSURANCES = [
   'Amil Dental',

@@ -1,6 +1,6 @@
 # Arcada Odontologia — site demonstrativo
 
-Case de portfólio da **2MRS Tecnologia**: site de uma clínica odontológica fictícia, com páginas de
+Case de portfólio da **Runa Web** ([runaweb.com.br](https://runaweb.com.br)): site de uma clínica odontológica fictícia, com páginas de
 tratamentos, equipe, biossegurança e agendamento pelo WhatsApp.
 
 Feito com **TanStack Start (React 19)**, hospedado no **Cloudflare Workers**. Não usa banco de dados.
@@ -49,4 +49,4 @@ npm run deploy          # → https://arcada-odontologia.<sua-conta>.workers.dev
 
 ---
 
-Desenvolvido por **2MRS Tecnologia**.
+Desenvolvido por **[Runa Web](https://runaweb.com.br)**.

@@ -8,7 +8,8 @@
 ## 1. O que é o projeto
 
 1. Site **demonstrativo (case de portfólio)** da **Arcada Odontologia**, uma clínica odontológica **fictícia**.
-2. Desenvolvido pela **2MRS Tecnologia**. O crédito "Desenvolvido por 2MRS Tecnologia" fica no rodapé e **não deve ser removido**.
+2. Desenvolvido pela **Runa Web** (`https://runaweb.com.br`). O crédito "Desenvolvido por Runa Web" fica no rodapé,
+   com link para o site, e **não deve ser removido**.
 3. Não há banco de dados, login nem pagamento. O agendamento monta uma mensagem e abre o **WhatsApp** do visitante.
 4. Todos os nomes, CROs, telefones, e-mails, endereços e depoimentos são **placeholders**.
 
@@ -68,15 +69,15 @@ docs/                       especificação e deploy
 
 ## 5. Regras de ouro
 
-| #   | Regra                                                                                          | Por quê                                     |
-| --- | ---------------------------------------------------------------------------------------------- | ------------------------------------------- |
-| 1   | **Não remova o crédito "Desenvolvido por 2MRS Tecnologia"** nem o aviso de site demonstrativo. | É um case de portfólio.                     |
-| 2   | **Textos e dados ficam em `src/content/`**, não espalhados nas páginas.                        | Trocar o cliente = editar só essa pasta.    |
-| 3   | **Imagens: lista única em `src/content/images.json`.** Use `<Photo k="nome" />`.               | O script e os prompts leem o mesmo arquivo. |
-| 4   | **Cores e fontes só pelas variáveis CSS** de `src/styles/base.css`.                            | Mudar a identidade em um lugar só.          |
-| 5   | **Novo domínio externo** (script, iframe, API) → inclua na CSP em `src/server.ts`.             | Senão o navegador bloqueia.                 |
-| 6   | **Nunca `dangerouslySetInnerHTML`.**                                                           | Evita XSS.                                  |
-| 7   | **Rode `npm run check` antes de concluir.**                                                    | É a rede de segurança do projeto.           |
+| #   | Regra                                                                                   | Por quê                                     |
+| --- | --------------------------------------------------------------------------------------- | ------------------------------------------- |
+| 1   | **Não remova o crédito "Desenvolvido por Runa Web"** nem o aviso de site demonstrativo. | É um case de portfólio.                     |
+| 2   | **Textos e dados ficam em `src/content/`**, não espalhados nas páginas.                 | Trocar o cliente = editar só essa pasta.    |
+| 3   | **Imagens: lista única em `src/content/images.json`.** Use `<Photo k="nome" />`.        | O script e os prompts leem o mesmo arquivo. |
+| 4   | **Cores e fontes só pelas variáveis CSS** de `src/styles/base.css`.                     | Mudar a identidade em um lugar só.          |
+| 5   | **Novo domínio externo** (script, iframe, API) → inclua na CSP em `src/server.ts`.      | Senão o navegador bloqueia.                 |
+| 6   | **Nunca `dangerouslySetInnerHTML`.**                                                    | Evita XSS.                                  |
+| 7   | **Rode `npm run check` antes de concluir.**                                             | É a rede de segurança do projeto.           |
 
 ---
 

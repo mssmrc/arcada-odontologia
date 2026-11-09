@@ -52,7 +52,10 @@ export function Footer() {
           © {new Date().getFullYear()} {SITE.name}. {DEMO_NOTICE}
         </p>
         <p className="credit">
-          {DEV_CREDIT.text} <strong>{DEV_CREDIT.name}</strong>
+          {DEV_CREDIT.text}{' '}
+          <a href={DEV_CREDIT.url} target="_blank" rel="noopener noreferrer">
+            <strong>{DEV_CREDIT.name}</strong>
+          </a>
         </p>
       </div>
     </footer>

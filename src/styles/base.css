@@ -437,8 +437,18 @@ p {
   font-size: 0.85rem;
   color: #9fc3ca;
 }
-.credit strong {
+/* Crédito de desenvolvimento: mantém o destaque (--sun) mesmo sendo link. */
+.credit strong,
+.credit a {
   color: var(--sun);
+}
+.credit a {
+  display: inline;
+  text-decoration: none;
+}
+.credit a:hover {
+  color: var(--sun);
+  text-decoration: underline;
 }
 @media (max-width: 900px) {
   .footer-grid {

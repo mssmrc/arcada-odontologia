@@ -1,7 +1,7 @@
 {
   "name": "arcada-odontologia",
   "version": "1.0.0",
-  "description": "Site demonstrativo da Arcada Odontologia (clínica fictícia) — TanStack Start + Cloudflare Workers. Desenvolvido por 2MRS Tecnologia.",
+  "description": "Site demonstrativo da Arcada Odontologia (clínica fictícia) — TanStack Start + Cloudflare Workers. Desenvolvido por Runa Web.",
   "scripts": {
     "dev": "vite dev --port 3000",
     "build": "vite build",

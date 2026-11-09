@@ -6,5 +6,5 @@ Resumo:
 
 - Site demonstrativo, sem banco de dados; agendamento abre o WhatsApp.
 - Textos e dados em `src/content/`; imagens em `src/content/images.json`.
-- Não remova o crédito "Desenvolvido por 2MRS Tecnologia".
+- Não remova o crédito "Desenvolvido por Runa Web" (link para runaweb.com.br).
 - Rode `npm run check` antes de terminar.
