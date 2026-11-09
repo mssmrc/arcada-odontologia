@@ -1,0 +1,485 @@
+/* ===== Tokens ===== */
+:root {
+  --porcelain: #f3f7f8;
+  --white: #ffffff;
+  --petrol: #0f2e3a;
+  --petrol-2: #16414f;
+  --teal: #0f7c86;
+  --teal-dark: #0b626a;
+  --ice: #dceef0;
+  --sun: #f4c04e;
+  --muted: #557079;
+  --line: #d3e1e4;
+
+  --font-display: 'Urbanist', system-ui, sans-serif;
+  --font-body: 'Albert Sans', system-ui, sans-serif;
+
+  --radius: 14px;
+  --wrap: 1180px;
+  --gutter: clamp(16px, 4vw, 32px);
+}
+
+/* ===== Base ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+body {
+  margin: 0;
+  background: var(--porcelain);
+  color: var(--petrol);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+a {
+  color: inherit;
+}
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  line-height: 1.12;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+p {
+  margin: 0;
+}
+:focus-visible {
+  outline: 3px solid var(--sun);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+.skip {
+  position: absolute;
+  left: -999px;
+  top: 8px;
+  z-index: 100;
+  background: var(--petrol);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+.skip:focus {
+  left: 8px;
+}
+
+/* ===== Tipografia ===== */
+.h1 {
+  font-size: clamp(2.3rem, 5vw, 3.6rem);
+  font-weight: 800;
+}
+.h2 {
+  font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+  font-weight: 700;
+}
+.lead {
+  font-size: 1.12rem;
+  color: var(--muted);
+  max-width: 62ch;
+  margin-top: 14px;
+}
+.kicker {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--teal);
+  margin-bottom: 14px;
+}
+.link {
+  font-weight: 600;
+  color: var(--teal);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+.link:hover {
+  color: var(--teal-dark);
+}
+
+/* ===== Botões ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 0 22px;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    color 0.15s,
+    border-color 0.15s;
+}
+.btn--lg {
+  min-height: 54px;
+  padding: 0 28px;
+  font-size: 1.05rem;
+}
+.btn--primary {
+  background: var(--teal);
+  color: #fff;
+}
+.btn--primary:hover {
+  background: var(--teal-dark);
+}
+.btn--ghost {
+  border-color: var(--petrol);
+  color: var(--petrol);
+  background: transparent;
+}
+.btn--ghost:hover {
+  background: var(--petrol);
+  color: #fff;
+}
+.btn--sun {
+  background: var(--sun);
+  color: var(--petrol);
+}
+.btn--sun:hover {
+  background: #ffd36f;
+}
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+/* ===== Imagens ===== */
+.img-real {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.img-slot {
+  width: 100%;
+  height: 100%;
+  min-height: 160px;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  text-align: center;
+  background:
+    repeating-linear-gradient(135deg, transparent 0 14px, rgb(15 124 134 / 0.07) 14px 28px), var(--ice);
+  color: var(--teal-dark);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* O arco é a marca visual da Arcada: toda foto principal tem o topo em arco. */
+.arch {
+  overflow: hidden;
+  background: var(--ice);
+  border-radius: 999px 999px var(--radius) var(--radius);
+}
+.arch > * {
+  width: 100%;
+  height: 100%;
+}
+
+/* ===== Cabeçalho ===== */
+.topbar {
+  background: var(--petrol);
+  color: #cfe3e7;
+  font-size: 0.85rem;
+}
+.topbar-in {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.topbar a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgb(243 247 248 / 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.header-in {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  min-height: 76px;
+}
+.header-in > a {
+  text-decoration: none;
+}
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--petrol);
+}
+.logo--light {
+  color: #fff;
+}
+.logo-mark {
+  width: 38px;
+  height: 38px;
+}
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.logo-text b {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.logo-text small {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 3px;
+}
+.logo--light .logo-text small {
+  color: #9fc3ca;
+}
+.nav {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
+}
+.nav a {
+  padding: 8px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.nav a:hover {
+  background: var(--ice);
+}
+.nav a.active {
+  background: var(--ice);
+  color: var(--teal-dark);
+  font-weight: 600;
+}
+.nav .nav-cta-mobile {
+  display: none;
+}
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.burger {
+  display: none;
+  width: 46px;
+  height: 46px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--white);
+  cursor: pointer;
+  padding: 12px 11px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.burger span {
+  display: block;
+  height: 2px;
+  background: var(--petrol);
+  border-radius: 2px;
+}
+
+@media (max-width: 920px) {
+  .topbar-hours {
+    display: none;
+  }
+  .header-cta {
+    display: none;
+  }
+  .burger {
+    display: flex;
+  }
+  .header-actions {
+    margin-left: auto;
+  }
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px var(--gutter) 24px;
+    background: var(--porcelain);
+    border-bottom: 1px solid var(--line);
+    display: none;
+  }
+  .nav.open {
+    display: flex;
+  }
+  .nav a {
+    padding: 12px 14px;
+    font-size: 1.05rem;
+  }
+  .nav .nav-cta-mobile {
+    display: inline-flex;
+    margin-top: 8px;
+    color: #fff;
+  }
+  .nav .nav-cta-mobile:hover {
+    background: var(--teal-dark);
+  }
+}
+@media (max-width: 560px) {
+  .topbar-in > span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+/* ===== Rodapé ===== */
+.footer {
+  background: var(--petrol);
+  color: #cfe3e7;
+  padding-top: 64px;
+  margin-top: 0;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.1fr 1fr;
+  gap: 40px;
+}
+.footer h2 {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 14px;
+}
+.footer a {
+  display: block;
+  text-decoration: none;
+  padding: 3px 0;
+}
+.footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.footer-brand p {
+  margin-top: 16px;
+  max-width: 32ch;
+}
+.footer-small {
+  font-size: 0.88rem;
+  color: #9fc3ca;
+  margin-top: 10px;
+}
+.footer-hours {
+  margin: 0 0 12px;
+}
+.footer-hours div {
+  margin-bottom: 8px;
+}
+.footer-hours dt {
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+.footer-hours dd {
+  margin: 0;
+  font-size: 0.92rem;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 48px;
+  padding-top: 20px;
+  padding-bottom: 28px;
+  border-top: 1px solid var(--petrol-2);
+  font-size: 0.85rem;
+  color: #9fc3ca;
+}
+.credit strong {
+  color: var(--sun);
+}
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== WhatsApp flutuante ===== */
+.wa-float {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px 12px 14px;
+  border-radius: 999px;
+  background: #1f9d55;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 10px 24px -8px rgb(15 46 58 / 0.5);
+}
+.wa-float:hover {
+  background: #188548;
+}
+.wa-float svg {
+  width: 24px;
+  height: 24px;
+}
+@media (max-width: 560px) {
+  .wa-float span {
+    display: none;
+  }
+  .wa-float {
+    padding: 14px;
+  }
+}
